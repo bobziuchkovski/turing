@@ -30,7 +30,7 @@ import (
 const reglen = 17
 const minkey = 8
 const maxkey = 32
-const maxiv = 48
+const maxlen = 48
 const confounder = 0x1020300
 
 // KeySizeError is used to indicate problems with provided key/IV values.
@@ -60,19 +60,22 @@ func NewCipher(key []byte, iv []byte) (cipher *Cipher, err error) {
 	ivlen := len(iv)
 
 	if keylen%4 != 0 {
-		return nil, KeySizeError("key size must be a multiple of 4")
+		err = KeySizeError("key size must be a multiple of 4")
 	}
 	if ivlen%4 != 0 {
-		return nil, KeySizeError("iv size must be a multiple of 4")
+		err = KeySizeError("iv size must be a multiple of 4")
 	}
 	if keylen < minkey {
-		return nil, KeySizeError(fmt.Sprintf("key size must be >= %d", minkey))
+		err = KeySizeError(fmt.Sprintf("key must be %d bytes or more in length", minkey))
 	}
 	if keylen > maxkey {
-		return nil, KeySizeError(fmt.Sprintf("key size must be <= %d", maxkey))
+		err = KeySizeError(fmt.Sprintf("key must be %d bytes or less in length", maxkey))
 	}
-	if keylen+ivlen > maxiv {
-		return nil, KeySizeError(fmt.Sprintf("combined key and iv sizes must be <= %d", maxiv))
+	if keylen+ivlen > maxlen {
+		err = KeySizeError(fmt.Sprintf("key and iv must be %d bytes or less in combined length", maxlen))
+	}
+	if err != nil {
+		return
 	}
 
 	cipher = &Cipher{}
