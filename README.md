@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/ziuchkovski/turing.svg?branch=master)](https://travis-ci.org/ziuchkovski/turing)
-[![Coverage](http://gocover.io/_badge/github.com/ziuchkovski/turing?2)](http://gocover.io/github.com/ziuchkovski/turing)
-[![Report Card](http://goreportcard.com/badge/ziuchkovski/turing)](http://goreportcard.com/report/ziuchkovski/turing)
-[![GoDoc](https://godoc.org/github.com/ziuchkovski/turing?status.svg)](https://godoc.org/github.com/ziuchkovski/turing)
+[![Build Status](https://travis-ci.org/bobziuchkovski/turing.svg?branch=master)](https://travis-ci.org/bobziuchkovski/turing)
+[![Coverage](https://gocover.io/_badge/github.com/bobziuchkovski/turing?1)](https://gocover.io/github.com/bobziuchkovski/turing)
+[![Report Card](http://goreportcard.com/badge/bobziuchkovski/turing)](http://goreportcard.com/report/bobziuchkovski/turing)
+[![GoDoc](https://godoc.org/github.com/bobziuchkovski/turing?status.svg)](https://godoc.org/github.com/bobziuchkovski/turing)
 
 # Turing
 
@@ -18,11 +18,11 @@ The API is stable.  Changes are guaranteed to remain backwards-compatible.
 
 ## Usage
 
-Please see the [godocs](https://godoc.org/github.com/ziuchkovski/turing) for usage details.
+Please see the [godocs](https://godoc.org/github.com/bobziuchkovski/turing) for usage details.
 
 ## Authors
 
-Bob Ziuchkovski (@ziuchkovski)
+Bob Ziuchkovski (@bobziuchkovski)
 
 ## License (MIT)
 
